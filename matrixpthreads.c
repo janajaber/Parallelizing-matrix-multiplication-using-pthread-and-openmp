@@ -61,19 +61,6 @@ int main() {
     gettimeofday(&end_time, NULL);
     double elapsed_time = (end_time.tv_sec - start_time.tv_sec) + (end_time.tv_usec - start_time.tv_usec) / 1000000.0;
     printf("Elapsed time using %d threads: %f seconds\n", NUM_THREADS, elapsed_time);
-    // Multiply the matrices serially
-//     gettimeofday(&start_time, NULL);
-//     for (int i = 0; i < MATRIX_SIZE; i++) {
-//         for (int j = 0; j < MATRIX_SIZE; j++) {
-//             matrixC[i][j] = 0;
-//             for (int k = 0; k < MATRIX_SIZE; k++) {
-//                 matrixC[i][j] += matrixA[i][k] * matrixB[k][j];
-//             }
-//         }
-//     }
-//     gettimeofday(&end_time, NULL);
-//     elapsed_time = (end_time.tv_sec - start_time.tv_sec) + (end_time.tv_usec - start_time.tv_usec) / 1000000.0;
-//    printf("Elapsed time using 1 thread: %f seconds\n", elapsed_time);
-
+   
     return 0;
 }
